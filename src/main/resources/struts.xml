@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="default" namespace="/" extends="json-default">
+        <interceptors>
+            <interceptor-stack name="customStack">
+                <interceptor-ref name="exception"/>
+                <interceptor-ref name="datetime"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-action-ref name="index"/>
+
+        <action name="index">
+            <result>/WEB-INF/index.jsp</result>
+        </action>
+
+        <action name="consume0" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume1" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume2" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume3" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume4" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume5" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume6" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume7" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume8" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+
+        <action name="consume9" class="org.demo.ConsumeAction" method="smd"> 
+            <interceptor-ref name="customStack"/>
+            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <result type="json">
+                <param name="noChache">true</param>
+                <param name="enableSMD">true</param>
+                <param name="enableGZIP">true</param>
+            </result>
+        </action>
+
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
